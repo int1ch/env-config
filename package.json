@@ -1,11 +1,20 @@
 {
   "name": "env-config",
+
   "version": "1.0.0",
   "description": "Configuration helper poviding setup from yaml/json or env",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Mike Nikitin",
   "license": "MIT",
   "private": false,
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "cleanup": "rm -r lib/* || :",
+    "build": "yarn run cleanup && yarn tsc",
+    "prepublish": "yarn run build"
+  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "env-var": "^7.1.1",

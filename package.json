@@ -1,10 +1,9 @@
 {
-  "name": "env-config",
-
-  "version": "1.0.0",
-  "description": "Configuration helper poviding setup from yaml/json or env",
+  "name": "@int1ch/env-config",
+  "version": "0.1.0",
+  "description": "Configuration helper providing setup from yaml/json or env",
   "main": "lib/index.js",
-  "author": "Mike Nikitin",
+  "author": "Mike Nikitin <int1ch@gmail.com>",
   "license": "MIT",
   "private": false,
   "files": [
@@ -28,5 +27,10 @@
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/int1ch/env-config.git"
   }
+
 }

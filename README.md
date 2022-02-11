@@ -2,21 +2,21 @@
 Help build config from configuration files and ENV var.
 
 ## suppored formats
-config files can be written in `yaml` | `.env`  | `json` formats,  package `yaml` and `dotenv` must be installed manualy, if you plan to use them.
+config files can be written in `.yaml` | `.env`  | `.json` formats,  package `yaml` and `dotenv` must be installed manualy, if you plan to use them.
 
 
 ## sources
-env-config try to find config dir in your package,
+env-config try to find `./config` dir in your package,
 and read first 
-* default.fmt 
-* development.fmt 
-* testing.fmt 
-* production.fmt 
-* secret.ftm
+* default
+* development
+* testing
+* production
+* secret
 * environment varables after that.
 
-names are wiritten in priority order, default file has the lowest one, environemnt variables override all.
-`.fmt` = `.json|.yaml|.env`
+names are written in priority order, default file has the lowest one, environment variables override all.
+possible extension are `.json|.yaml|.env`
 
 
 ```
@@ -26,5 +26,7 @@ const reader = new ConfigReader();
 reader.get("SECRET").required().asString();
 ```
 
-reader provide get method as a proxy to [env-var](https://github.com/evanshortiss/env-var) 
+reader provide get method as a proxy to [env-var](https://github.com/evanshortiss/env-var)
+with all .default .required .asPort and other methods
 
+[Browse package](https://unpkg.com/browse/@int1ch/env-config/)
